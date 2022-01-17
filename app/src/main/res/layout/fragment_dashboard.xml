@@ -13,6 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:thumbTint="@color/teal_200"
+
         android:layout_margin="10dp"
         app:trackTint="#F20544" />
     <TextView
