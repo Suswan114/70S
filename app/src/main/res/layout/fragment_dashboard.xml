@@ -6,6 +6,25 @@
     android:background="#012340"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_day"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:thumbTint="@color/teal_200"
+        android:layout_margin="10dp"
+        app:trackTint="#F20544" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/swithch_text"
+        app:layout_constraintTop_toTopOf="@id/switch_day"
+        app:layout_constraintBottom_toBottomOf="@id/switch_day"
+        app:layout_constraintEnd_toStartOf="@id/switch_day"
+        android:text="WEEKLY"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"/>
     <androidx.cardview.widget.CardView
         android:layout_width="190dp"
         android:layout_height="64dp"
@@ -129,10 +148,10 @@
         app:layout_constraintTop_toTopOf="@id/expenses"
         app:layout_constraintBottom_toBottomOf="@id/expenses"
         android:layout_marginStart="20dp"
-        android:layout_toRightOf="@id/expenses"
+        android:layout_toEndOf="@id/expenses"
         android:src="@drawable/ic_launcher_background"
         android:clickable="true"
-        android:focusable="true"/>
+        android:focusable="true" />
     <androidx.cardview.widget.CardView
         android:layout_width="190dp"
         android:layout_height="64dp"
@@ -172,7 +191,8 @@
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/minus"
-       />
+        android:clickable="true"
+        android:focusable="true" />
 
     <ImageView
         android:id="@+id/minus"
@@ -183,7 +203,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/add"
-        app:layout_constraintTop_toBottomOf="@id/earnings" />
+        app:layout_constraintTop_toBottomOf="@id/earnings"
+        android:clickable="true"
+        android:focusable="true"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

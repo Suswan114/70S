@@ -9,6 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:background="#3F618C"
         android:id="@+id/nav_menu">
         <ImageView
             android:layout_width="wrap_content"
@@ -17,6 +18,8 @@
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/logo"
             android:scaleType="fitXY"
+            android:clickable="true"
+            android:focusable="true"
             android:src="@drawable/ic_launcher_background"/>]
         <ImageView
             android:layout_width="40dp"
@@ -32,6 +35,8 @@
             app:layout_constraintEnd_toStartOf="@id/profile"
             android:layout_marginEnd="5dp"
             android:id="@+id/setting"
+            android:clickable="true"
+            android:focusable="true"
             android:src="@drawable/ic_launcher_background"/>
         <ImageView
             android:layout_width="40dp"
@@ -40,6 +45,8 @@
             app:layout_constraintEnd_toStartOf="@id/setting"
             android:layout_marginEnd="5dp"
             android:id="@+id/unknownbttn"
+            android:clickable="true"
+            android:focusable="true"
             android:src="@drawable/ic_launcher_background"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <FrameLayout
@@ -54,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_nav"
-        android:background="@color/black"
+        android:background="#3F618C"
         android:layout_alignParentBottom="true"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
