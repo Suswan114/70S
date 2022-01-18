@@ -51,15 +51,15 @@
         android:id="@+id/fragment_container"
         android:layout_below="@+id/nav_menu"
         />
-    
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottom_nav"
-        android:background="#3F618C"
         android:layout_alignParentBottom="true"
         app:itemIconTint="@color/white"
+        android:background="#3F618C"
         app:itemTextColor="@color/white"
-        app:menu="@menu/navigation_menu"/>
+        app:menu="@menu/navigation_menu" />
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#012340"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -100,36 +101,38 @@
                 app:layout_constraintStart_toEndOf="@id/rank_text"
                 android:text="69"
                 android:textSize="24sp"
-                android:layout_marginStart="6dp"
+                android:layout_marginStart="8dp"
                 android:id="@+id/rank"
                 android:textStyle="bold"
                 android:textColor="#CF1F1F"/>
             <ImageView
                 android:layout_width="110dp"
-                android:layout_height="8dp"
+                android:layout_height="5dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="4dp"
-                android:src="@color/white"
+                android:src="#F47F2B"
                 android:id="@+id/ver_bar"
                 app:layout_constraintStart_toEndOf="@id/hor_bar"
                 app:layout_constraintTop_toBottomOf="@id/rank_text"
                 app:layout_constraintEnd_toEndOf="parent"/>
+
             <ImageView
+                android:id="@+id/help"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                app:layout_constraintTop_toBottomOf="@id/ver_bar"
-                app:layout_constraintStart_toEndOf="@id/hor_bar"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="12dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:id="@+id/help"
-                android:src="@drawable/ic_launcher_background"/>
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/hor_bar"
+                app:layout_constraintTop_toBottomOf="@id/ver_bar"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
             <ImageView
-                android:layout_width="8dp"
+                android:layout_width="4dp"
                 android:layout_height="100dp"
-                android:src="@color/white"
+                android:src="#F47F2B"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/rank_text"
                 app:layout_constraintStart_toEndOf="@id/score_text_in_card"

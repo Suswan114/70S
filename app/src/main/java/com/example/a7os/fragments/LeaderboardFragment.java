@@ -39,13 +39,8 @@ public class LeaderboardFragment extends Fragment {
         //adapter.notifyDataSetChanged();
         return view;
     }
-
     public void initData() {
-
         leaderboardList=new ArrayList<>();
-
-
-
         leaderboardList.add(new LeaderboardModelClass("1","Swapan","110"));
         leaderboardList.add(new LeaderboardModelClass("2","Swapan","110"));
         leaderboardList.add(new LeaderboardModelClass("3","Swapan","110"));
@@ -81,7 +76,5 @@ public class LeaderboardFragment extends Fragment {
         leaderboardList.add(new LeaderboardModelClass("33","Swapan","110"));
         leaderboardList.add(new LeaderboardModelClass("34","Swapan","110"));
         leaderboardList.add(new LeaderboardModelClass("35","Swapan","110"));
-
-
     }
 }
