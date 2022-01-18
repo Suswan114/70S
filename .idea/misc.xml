@@ -6,16 +6,19 @@
         <entry key="..\:/Projects/70S/app/src/main/res/drawable/horizontal_line.xml" value="0.2203125" />
         <entry key="..\:/Projects/70S/app/src/main/res/drawable/ic_bars.xml" value="0.11770833333333333" />
         <entry key="..\:/Projects/70S/app/src/main/res/drawable/ic_baseline_west_24.xml" value="0.2203125" />
+        <entry key="..\:/Projects/70S/app/src/main/res/drawable/ic_minus.xml" value="0.2203125" />
         <entry key="..\:/Projects/70S/app/src/main/res/drawable/line.xml" value="0.2203125" />
         <entry key="..\:/Projects/70S/app/src/main/res/drawable/logo.xml" value="0.2203125" />
+        <entry key="..\:/Projects/70S/app/src/main/res/drawable/round_corner_bottom.xml" value="0.2203125" />
+        <entry key="..\:/Projects/70S/app/src/main/res/drawable/round_corner_top.xml" value="0.2203125" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_dashboard.xml" value="0.18" />
+        <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_dashboard.xml" value="0.16" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_history.xml" value="0.21614583333333334" />
-        <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_leaderboard.xml" value="0.14" />
+        <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_leaderboard.xml" value="0.25" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_settings.xml" value="0.20416666666666666" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_wallet..xml" value="0.20416666666666666" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_wallet.xml" value="0.1" />
-        <entry key="..\:/Projects/70S/app/src/main/res/layout/leaderboard_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Projects/70S/app/src/main/res/layout/leaderboard_item.xml" value="0.25" />
         <entry key="..\:/Projects/70S/app/src/main/res/menu/navigation_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
