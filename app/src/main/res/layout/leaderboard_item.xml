@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:weightSum="1"
-    android:id="@+id/leaderboar_item_container"
-    android:layout_marginBottom="10dp">
+    android:id="@+id/leaderboard_item_container"
+    android:layout_marginTop="1dp"
+    android:layout_marginBottom="2dp">
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_weight="0.125"
