@@ -9,7 +9,7 @@ import android.view.MenuItem;
 
 import com.example.a7os.R;
 import com.example.a7os.fragments.DashboardFragment;
-import com.example.a7os.fragments.HistoryFragment;
+import com.example.a7os.fragments.LearnFragment;
 import com.example.a7os.fragments.LeaderboardFragment;
 import com.example.a7os.fragments.WalletFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment=new WalletFragment();
                         break;
                         //open fragement
-                    case R.id.history:
-                        selectedFragment=new HistoryFragment();
+                    case R.id.learn:
+                        selectedFragment=new LearnFragment();
                         break;
                         //open fragement
                     case R.id.leaderboard:
