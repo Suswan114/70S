@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.7OS">
         <activity
+            android:name=".activities.IntermediateInvestLearnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.InvestmentLearnActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.PlannerActivity"
             android:exported="false" />
         <activity

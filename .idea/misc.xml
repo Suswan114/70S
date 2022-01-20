@@ -12,6 +12,8 @@
         <entry key="..\:/Projects/70S/app/src/main/res/drawable/nav_view_coloured.xml" value="0.2203125" />
         <entry key="..\:/Projects/70S/app/src/main/res/drawable/round_corner_bottom.xml" value="0.2203125" />
         <entry key="..\:/Projects/70S/app/src/main/res/drawable/round_corner_top.xml" value="0.2203125" />
+        <entry key="..\:/Projects/70S/app/src/main/res/layout/activity_intermediate_invest_learn.xml" value="0.20416666666666666" />
+        <entry key="..\:/Projects/70S/app/src/main/res/layout/activity_investment_learn.xml" value="0.20416666666666666" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/activity_planner.xml" value="0.19010416666666666" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/activity_profile.xml" value="0.1" />
@@ -19,6 +21,7 @@
         <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_dashboard.xml" value="0.22" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_history.xml" value="0.21614583333333334" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_leaderboard.xml" value="0.22" />
+        <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_learn.xml" value="0.20416666666666666" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_settings.xml" value="0.20416666666666666" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_wallet..xml" value="0.20416666666666666" />
         <entry key="..\:/Projects/70S/app/src/main/res/layout/fragment_wallet.xml" value="0.1" />
