@@ -2,6 +2,7 @@ package com.example.a7os.fragments;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +35,16 @@ public class LearnFragment extends Fragment {
                 ((Activity)getActivity()).overridePendingTransition(0,0);
             }
         });
+        savings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent viewIntent =
+                        new Intent("android.intent.action.VIEW",
+                                Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+                startActivity(viewIntent);
+            }
+        });
+
         return view;
     }
 }

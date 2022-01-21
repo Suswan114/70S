@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.app.Activity;
 import android.content.Intent;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -31,8 +32,7 @@ public class InvestmentLearnActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                // move to learn fragment
+                finish();
             }
         });
 
@@ -41,6 +41,26 @@ public class InvestmentLearnActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),IntermediateInvestLearnActivity.class);
                 startActivity(i);
+            }
+        });
+
+        beginner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent viewIntent =
+                        new Intent("android.intent.action.VIEW",
+                                Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+                startActivity(viewIntent);
+            }
+        });
+
+        trends.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent viewIntent =
+                        new Intent("android.intent.action.VIEW",
+                                Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+                startActivity(viewIntent);
             }
         });
 
