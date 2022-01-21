@@ -24,6 +24,8 @@ public class LearnFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_learn,container,false);
         invest=view.findViewById(R.id.invest);
+        savings=view.findViewById(R.id.savings);
+
         invest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,6 +35,5 @@ public class LearnFragment extends Fragment {
             }
         });
         return view;
-        //check
     }
 }

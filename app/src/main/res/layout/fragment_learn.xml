@@ -8,43 +8,89 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LEARN TO EARN"
-        android:layout_margin="20dp"
+        android:text="YOUR"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/text"
+        android:id="@+id/text1"
         app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEARNING"
+        android:layout_marginStart="10dp"
+        android:textSize="36sp"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        android:id="@+id/text2"
+        android:textColor="#FF9D2B"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GUIDE."
+        android:textSize="24sp"
+        android:textColor="#FF6B00"
+        android:layout_marginStart="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/text2"
+        android:id="@+id/text"
+        app:layout_constraintStart_toEndOf="@id/text2"/>
     <androidx.cardview.widget.CardView
         app:layout_constraintTop_toBottomOf="@id/text"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:id="@+id/savings"
+        android:id="@+id/invest"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/invest"
+        app:layout_constraintBottom_toTopOf="@id/savings"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="10dp"
         app:cardCornerRadius="35dp"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="#F20544"
         android:clickable="true"
         android:focusable="true">
-
-        <!-- designs left -->
-
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_growth_investment_svgrepo_com" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INVEST"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:layout_gravity="bottom"/>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@id/savings"
+       app:layout_constraintTop_toBottomOf="@id/invest"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="10dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="#8C2656"
         app:cardCornerRadius="35dp"
-        android:id="@+id/invest"
+        android:id="@+id/savings"
         android:clickable="true"
         android:focusable="true">
-
-        <!-- designs left -->
-
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_savings_hog_svgrepo_com" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVINGS"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:layout_gravity="bottom"/>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

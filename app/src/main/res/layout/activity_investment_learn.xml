@@ -11,13 +11,58 @@
         android:layout_height="30dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="10dp"
-        android:src="@drawable/ic_food_circle"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_arrow_circle_left"
         android:id="@+id/back_button"
         android:clickable="true"
-        android:focusable="true"/>
+        android:focusable="true"
+        app:tint="#3F618C" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/back_button"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:id="@+id/text1"
+        android:text="LEARN HOW TO"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/back_button"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        android:layout_marginStart="25dp"
+        android:textSize="40sp"
+        android:textColor="#FF9D2B"
+        android:id="@+id/text2"
+        android:padding="0dp"
+        android:text="INVEST"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/back_button"
+        app:layout_constraintTop_toBottomOf="@id/text2"
+        android:layout_marginStart="25dp"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="4dp"
+        android:id="@+id/text3"
+        android:text="YOUR"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/text3"
+        app:layout_constraintTop_toBottomOf="@id/text2"
+        android:layout_marginStart="10dp"
+        android:textSize="32sp"
+        android:textColor="#FF6B00"
+        android:id="@+id/text4"
+        android:text="MONEY"/>
     <androidx.cardview.widget.CardView
-        app:layout_constraintTop_toBottomOf="@id/back_button"
+        app:layout_constraintTop_toBottomOf="@id/text4"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/beginner"
@@ -26,12 +71,24 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="10dp"
         app:cardCornerRadius="35dp"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="#F20544"
         android:clickable="true"
         android:focusable="true">
-
-        <!-- designs left -->
-
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_skill_level_basic_svgrepo_com"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BEGINNERS"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"/>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -41,14 +98,26 @@
         app:layout_constraintBottom_toTopOf="@id/trends"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="10dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="#8C2656"
         app:cardCornerRadius="35dp"
         android:id="@+id/intermediate"
         android:clickable="true"
         android:focusable="true">
-
-        <!-- designs left -->
-
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_skill_level_intermediate_svgrepo_com"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INTERMEDIATE"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"/>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -58,14 +127,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="10dp"
-        android:backgroundTint="#DD1B1B"
+        android:backgroundTint="#FFCF00"
         app:cardCornerRadius="35dp"
         android:id="@+id/trends"
         android:clickable="true"
         android:focusable="true">
-
-        <!-- designs left -->
-
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_analytics_svgrepo_com"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TRENDS"
+            android:textColor="#FF9900"
+            android:textSize="26sp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"/>
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
