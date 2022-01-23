@@ -22,7 +22,8 @@
         app:layout_constraintStart_toEndOf="@id/back_button_planner"
         android:layout_marginStart="10dp"
         android:text="CATEGORIES"
-        android:textSize="30sp"
+        android:textSize="25sp"
+
         android:textColor="#A2E778"/>
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:layout_width="wrap_content"
@@ -76,7 +77,7 @@
             android:textSize="10dp"
             android:textColor="@color/white"
             android:backgroundTint="#3F618C"
-            android:text="CASH"/>
+            android:text="WEEK"/>
         <Button
             android:layout_width="50dp"
             android:layout_height="40dp"
@@ -85,7 +86,7 @@
             android:textColor="@color/white"
             android:textSize="10dp"
             android:backgroundTint="#3F618C"
-            android:text="CREDIT"/>
+            android:text="MONTH"/>
         <Button
             android:layout_width="50dp"
             android:layout_height="40dp"
@@ -104,8 +105,24 @@
         app:cardCornerRadius="35dp"
         app:layout_constraintTop_toBottomOf="@id/button_toggle_time"
         app:layout_constraintEnd_toStartOf="@id/food_card"
-        app:layout_constraintStart_toStartOf="parent">
-
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#FFA600">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_home"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:tint="#FFE600" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="25%"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textColor="#FFE600"/>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="70dp"
@@ -115,7 +132,23 @@
         app:layout_constraintTop_toTopOf="@id/housing_card"
         app:layout_constraintStart_toEndOf="@id/housing_card"
         app:layout_constraintEnd_toStartOf="@id/medicine_card"
-        >
+        android:backgroundTint="#FF6361">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_pizza_slice"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:tint="#FFB8B8" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="15%"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textColor="#FFB8B8"/>
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -125,7 +158,24 @@
         app:cardCornerRadius="35dp"
         app:layout_constraintTop_toTopOf="@id/housing_card"
         app:layout_constraintStart_toEndOf="@id/food_card"
-        app:layout_constraintEnd_toStartOf="@id/transport_card">
+        app:layout_constraintEnd_toStartOf="@id/transport_card"
+        android:backgroundTint="#1E90FF">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_briefcase_medical"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:tint="#B5D6F8" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="2%"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="35dp"
+            android:textStyle="bold"
+            android:textColor="#B5D6F8"/>
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -135,7 +185,24 @@
         app:cardCornerRadius="35dp"
         app:layout_constraintTop_toTopOf="@id/housing_card"
         app:layout_constraintStart_toEndOf="@id/medicine_card"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#F20544">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_subway"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:tint="#FFB7B7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="15%"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="35dp"
+            android:textStyle="bold"
+            android:textColor="#FFB7B7"/>
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -146,7 +213,26 @@
         app:layout_constraintTop_toBottomOf="@id/housing_card"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/food_text"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="HOUSING"
+            android:textSize="10sp"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="INR 1000"
+            android:gravity="center"
+            android:layout_marginBottom="3dp"
+            android:textSize="10sp"
+            android:layout_gravity="bottom" />
+
+
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="70dp"
@@ -156,7 +242,24 @@
         app:layout_constraintTop_toBottomOf="@id/housing_card"
         app:layout_constraintStart_toEndOf="@id/housing_text"
         app:layout_constraintEnd_toStartOf="@id/medicine_text"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="FOOD"
+            android:textSize="10sp"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginBottom="3dp"
+            android:text="INR 1000"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:layout_gravity="bottom" />
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -167,7 +270,24 @@
         app:layout_constraintTop_toBottomOf="@id/housing_card"
         app:layout_constraintStart_toEndOf="@id/food_text"
         app:layout_constraintEnd_toStartOf="@id/transport_text"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="MEDICATION"
+            android:textSize="10sp"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="INR 1000"
+            android:gravity="center"
+            android:layout_marginBottom="3dp"
+            android:textSize="10sp"
+            android:layout_gravity="bottom" />
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -178,7 +298,24 @@
         app:layout_constraintTop_toBottomOf="@id/housing_card"
         app:layout_constraintStart_toEndOf="@id/medicine_text"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="TRANSPORT"
+            android:textSize="10sp"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="INR 1000"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:layout_marginBottom="3dp"
+            android:layout_gravity="bottom" />
 
     </androidx.cardview.widget.CardView>
 
@@ -190,7 +327,24 @@
         app:cardCornerRadius="35dp"
         app:layout_constraintTop_toBottomOf="@id/housing_text"
         app:layout_constraintEnd_toStartOf="@id/luxury_card"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#87CEFA">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_hand_holding_usd"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:tint="#2FACFA" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="10%"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textColor="#2FACFA"/>
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -201,8 +355,23 @@
         app:layout_constraintTop_toTopOf="@id/essentials_card"
         app:layout_constraintStart_toEndOf="@id/housing_card"
         app:layout_constraintEnd_toStartOf="@id/medicine_card"
-        >
-
+        android:backgroundTint="#6495ED">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_coins"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:tint="#1C65E9" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="20%"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textColor="#1C65E9"/>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="70dp"
@@ -211,7 +380,24 @@
         app:cardCornerRadius="35dp"
         app:layout_constraintTop_toTopOf="@id/essentials_card"
         app:layout_constraintStart_toEndOf="@id/food_card"
-        app:layout_constraintEnd_toStartOf="@id/transport_card">
+        app:layout_constraintEnd_toStartOf="@id/transport_card"
+        android:backgroundTint="#800000">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_gift"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:tint="#E51212" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="3%"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textColor="#E51212"/>
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -221,7 +407,24 @@
         app:cardCornerRadius="35dp"
         app:layout_constraintTop_toTopOf="@id/essentials_card"
         app:layout_constraintStart_toEndOf="@id/medicine_card"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#FFD700">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_question"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:tint="#FFA800" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="10%"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textColor="#FFA800"/>
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -232,7 +435,24 @@
         app:layout_constraintTop_toBottomOf="@id/essentials_card"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/food_text"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="ESSENTIALS"
+            android:textSize="10sp"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="INR 1000"
+            android:gravity="center"
+            android:layout_marginBottom="3dp"
+            android:textSize="10sp"
+            android:layout_gravity="bottom" />
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="70dp"
@@ -242,7 +462,24 @@
         app:layout_constraintTop_toBottomOf="@id/essentials_card"
         app:layout_constraintStart_toEndOf="@id/housing_text"
         app:layout_constraintEnd_toStartOf="@id/medicine_text"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="LUXURY"
+            android:textSize="10sp"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="INR 1000"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:layout_marginBottom="3dp"
+            android:layout_gravity="bottom" />
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -253,8 +490,24 @@
         app:layout_constraintTop_toBottomOf="@id/essentials_card"
         app:layout_constraintStart_toEndOf="@id/food_text"
         app:layout_constraintEnd_toStartOf="@id/transport_text"
-        android:layout_marginTop="10dp">
-
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="GIFTS"
+            android:textSize="10sp"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="INR 1000"
+            android:gravity="center"
+            android:layout_marginBottom="3dp"
+            android:textSize="10sp"
+            android:layout_gravity="bottom" />
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="70dp"
@@ -264,7 +517,24 @@
         app:layout_constraintTop_toBottomOf="@id/essentials_card"
         app:layout_constraintStart_toEndOf="@id/medicine_text"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="MISC."
+            android:textSize="10sp"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="INR 1000"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:layout_marginBottom="3dp"
+            android:layout_gravity="bottom" />
 
     </androidx.cardview.widget.CardView>
 
@@ -276,10 +546,71 @@
         android:layout_marginTop="25dp"
         android:layout_marginStart="35dp"
         android:text="STATISTICS"
-        android:textSize="30dp"
+        android:textSize="25sp"
         android:id="@+id/stats_text"
         android:textColor="#A2E778"/>
 
     <!-- TODO PIE CHART-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stats_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="40dp"
+        android:backgroundTint="@color/white">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/pie_3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/pie_2"
+                android:id="@+id/pie_1"
+                android:backgroundTint="@color/white">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/pie_chart_1" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/pie_4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/pie_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/pie_2">
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/pie_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/pie_4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/pie_3">
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/pie_2"
+                app:layout_constraintStart_toEndOf="@id/pie_3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/pie_4">
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
