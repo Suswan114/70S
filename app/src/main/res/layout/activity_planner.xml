@@ -4,12 +4,282 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#012340"
     tools:context=".activities.PlannerActivity">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/back_button_planner"
+        android:src="@drawable/ic_arrow_circle_left"
+        android:layout_margin="10dp"
+        app:tint="#3F618C" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/back_button_planner"
+        app:layout_constraintStart_toEndOf="@id/back_button_planner"
+        android:layout_marginStart="10dp"
+        android:text="CATEGORIES"
+        android:textSize="30sp"
+        android:textColor="#A2E778"/>
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/button_toggle_type"
+        android:layout_margin="4dp">
+        <Button
+
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:id="@+id/cash_button"
+            android:padding="0dp"
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#3F618C"
+            android:text="CASH"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:id="@+id/credit_button"
+            android:padding="0dp"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:backgroundTint="#3F618C"
+            android:text="CREDIT"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:id="@+id/all_button"
+            android:padding="0dp"
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#3F618C"
+            android:text="ALL"/>
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button_toggle_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/button_toggle_time"
+        android:layout_marginHorizontal="4dp">
+        <Button
+
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:id="@+id/week_button"
+            android:padding="0dp"
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#3F618C"
+            android:text="CASH"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:id="@+id/month_button"
+            android:padding="0dp"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:backgroundTint="#3F618C"
+            android:text="CREDIT"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:id="@+id/alltime_button"
+            android:padding="0dp"
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#3F618C"
+            android:text="ALL"/>
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/housing_card"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintTop_toBottomOf="@id/button_toggle_time"
+        app:layout_constraintEnd_toStartOf="@id/food_card"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/food_card"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintTop_toTopOf="@id/housing_card"
+        app:layout_constraintStart_toEndOf="@id/housing_card"
+        app:layout_constraintEnd_toStartOf="@id/medicine_card"
+        >
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/medicine_card"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintTop_toTopOf="@id/housing_card"
+        app:layout_constraintStart_toEndOf="@id/food_card"
+        app:layout_constraintEnd_toStartOf="@id/transport_card">
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/transport_card"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintTop_toTopOf="@id/housing_card"
+        app:layout_constraintStart_toEndOf="@id/medicine_card"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:id="@+id/housing_text"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/housing_card"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Planner"/>
+        app:layout_constraintEnd_toStartOf="@id/food_text"
+        android:layout_marginTop="10dp">
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:id="@+id/food_text"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/housing_card"
+        app:layout_constraintStart_toEndOf="@id/housing_text"
+        app:layout_constraintEnd_toStartOf="@id/medicine_text"
+        android:layout_marginTop="10dp">
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:id="@+id/medicine_text"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/housing_card"
+        app:layout_constraintStart_toEndOf="@id/food_text"
+        app:layout_constraintEnd_toStartOf="@id/transport_text"
+        android:layout_marginTop="10dp">
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/transport_text"
+        app:layout_constraintTop_toBottomOf="@id/housing_card"
+        app:layout_constraintStart_toEndOf="@id/medicine_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp">
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/essentials_card"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintTop_toBottomOf="@id/housing_text"
+        app:layout_constraintEnd_toStartOf="@id/luxury_card"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/luxury_card"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintTop_toTopOf="@id/essentials_card"
+        app:layout_constraintStart_toEndOf="@id/housing_card"
+        app:layout_constraintEnd_toStartOf="@id/medicine_card"
+        >
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/gift_card"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintTop_toTopOf="@id/essentials_card"
+        app:layout_constraintStart_toEndOf="@id/food_card"
+        app:layout_constraintEnd_toStartOf="@id/transport_card">
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/misc_card"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintTop_toTopOf="@id/essentials_card"
+        app:layout_constraintStart_toEndOf="@id/medicine_card"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:id="@+id/essentials_text"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/essentials_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/food_text"
+        android:layout_marginTop="10dp">
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:id="@+id/luxury_text"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/essentials_card"
+        app:layout_constraintStart_toEndOf="@id/housing_text"
+        app:layout_constraintEnd_toStartOf="@id/medicine_text"
+        android:layout_marginTop="10dp">
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:id="@+id/gift_text"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toBottomOf="@id/essentials_card"
+        app:layout_constraintStart_toEndOf="@id/food_text"
+        app:layout_constraintEnd_toStartOf="@id/transport_text"
+        android:layout_marginTop="10dp">
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/misc_text"
+        app:layout_constraintTop_toBottomOf="@id/essentials_card"
+        app:layout_constraintStart_toEndOf="@id/medicine_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp">
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/essentials_text"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="35dp"
+        android:text="STATISTICS"
+        android:textSize="30dp"
+        android:id="@+id/stats_text"
+        android:textColor="#A2E778"/>
+
+    <!-- TODO PIE CHART-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

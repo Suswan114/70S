@@ -19,7 +19,7 @@
             android:name=".activities.PlannerActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.SettingsActivity"
+            android:name=".activities.HistoryActivity"
             android:exported="false" />
         <activity
             android:name=".activities.ProfileActivity"

@@ -2,11 +2,8 @@ package com.example.a7os.fragments;
 
 import static android.R.color.*;
 
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,13 +15,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
-import android.R.color;
+
 import com.example.a7os.R;
 import com.example.a7os.activities.PlannerActivity;
-import com.google.android.material.button.MaterialButtonToggleGroup;
 
 public class DashboardFragment extends Fragment {
 
@@ -32,7 +27,7 @@ public class DashboardFragment extends Fragment {
     ImageView plus,minus;
     Button cashButton,creditButton,allButton;
     SwitchCompat toggleSwitch;
-    TextView switchText,cash,credit,total;
+    TextView switchText,expenditure, earnings,total;
 
     @Nullable
     @Override
@@ -45,8 +40,8 @@ public class DashboardFragment extends Fragment {
         minus=view.findViewById(R.id.minus_button);
         toggleSwitch=view.findViewById(R.id.switch_day);
         switchText=view.findViewById(R.id.switch_text);
-        cash=view.findViewById(R.id.cash_val);
-        credit=view.findViewById(R.id.credit_val);
+        expenditure=view.findViewById(R.id.cash_val);
+        earnings =view.findViewById(R.id.credit_val);
         total=view.findViewById(R.id.total_val);
         cashButton=view.findViewById(R.id.cash_button);
         creditButton=view.findViewById(R.id.credit_button);
@@ -54,15 +49,11 @@ public class DashboardFragment extends Fragment {
 
         allButton.setBackgroundColor(getResources().getColor(R.color.button_selected));
 
-
-
-        /*TODO
-            1.TOGGLE BUTTON FUNCTIONS LEFT
-            2.SWITCH FUNCTIONS LEFT
-            3.TEXT NOT CHANGING ON CLICKS
-            4.DESIGNS REMODELING
-            /#1D385A/
-         */
+        /*______________________________TEXT CONFIG___________________________*/
+        final int[] selected = {0};
+        expenditure.setText("INR 2,500");
+        earnings.setText("INR 3,000");
+        total.setText("INR 500");
 
         /*_______________________________BUTTONS CONFIGS_________________________________________*/
 
@@ -72,8 +63,17 @@ public class DashboardFragment extends Fragment {
                 cashButton.setBackgroundColor(getResources().getColor(R.color.button_selected));
                 creditButton.setBackgroundColor(getResources().getColor(R.color.button_unselected));
                 allButton.setBackgroundColor(getResources().getColor(R.color.button_unselected));
+                selected[0] =1;
+                if(toggleSwitch.isChecked()){
+                    expenditure.setText("INR 4,000");
+                    earnings.setText("INR 4,800");
+                    total.setText("INR 800");
+                }else{
+                    expenditure.setText("INR 1,000");
+                    earnings.setText("INR 1,200");
+                    total.setText("INR 200");
+                }
 
-                //text change
             }
         });
         creditButton.setOnClickListener(new View.OnClickListener() {
@@ -83,7 +83,17 @@ public class DashboardFragment extends Fragment {
                 cashButton.setBackgroundColor(getResources().getColor(R.color.button_unselected));
                 allButton.setBackgroundColor(getResources().getColor(R.color.button_unselected));
 
-                //text change
+                selected[0] =2;
+
+                if(toggleSwitch.isChecked()){
+                    expenditure.setText("INR 6,000");
+                    earnings.setText("INR 7,200");
+                    total.setText("INR 1,200");
+                }else{
+                    expenditure.setText("INR 1,500");
+                    earnings.setText("INR 1,800");
+                    total.setText("INR 300");
+                }
             }
         });
         allButton.setOnClickListener(new View.OnClickListener() {
@@ -92,8 +102,16 @@ public class DashboardFragment extends Fragment {
                 allButton.setBackgroundColor(getResources().getColor(R.color.button_selected));
                 creditButton.setBackgroundColor(getResources().getColor(R.color.button_unselected));
                 cashButton.setBackgroundColor(getResources().getColor(R.color.button_unselected));
-
-                //text change
+                selected[0] =0;
+                if(toggleSwitch.isChecked()){
+                    expenditure.setText("INR 10,000");
+                    earnings.setText("INR 12,000");
+                    total.setText("INR 2,000");
+                }else{
+                    expenditure.setText("INR 2,500");
+                    earnings.setText("INR 3,000");
+                    total.setText("INR 500");
+                }
             }
         });
 
@@ -102,10 +120,35 @@ public class DashboardFragment extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     switchText.setText("MONTHLY");
-                    //weekly
+                    if(selected[0]==0){
+                        expenditure.setText("INR 10,000");
+                        earnings.setText("INR 12,000");
+                        total.setText("INR 2,000");
+                    }else if(selected[0]==1){
+                        expenditure.setText("INR 4,000");
+                        earnings.setText("INR 4,800");
+                        total.setText("INR 800");
+                    }else{
+                        expenditure.setText("INR 6,000");
+                        earnings.setText("INR 7,200");
+                        total.setText("INR 1,200");
+                    }
+
                 }else{
                     switchText.setText("WEEKLY");
-                    //monthly
+                    if(selected[0]==0){
+                        expenditure.setText("INR 2,500");
+                        earnings.setText("INR 3,000");
+                        total.setText("INR 500");
+                    }else if(selected[0]==1){
+                        expenditure.setText("INR 1,000");
+                        earnings.setText("INR 1,200");
+                        total.setText("INR 200");
+                    }else{
+                        expenditure.setText("INR 1,500");
+                        earnings.setText("INR 1,800");
+                        total.setText("INR 300");
+                    }
                 }
             }
         });
@@ -179,6 +222,5 @@ public class DashboardFragment extends Fragment {
         });
         minus_dialog.show();
     }
-
 
 }

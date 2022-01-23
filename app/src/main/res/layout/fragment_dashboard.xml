@@ -87,7 +87,7 @@
             android:layout_height="match_parent"
             android:gravity="bottom"
             android:layout_marginStart="15dp"
-            android:text="CASH"
+            android:text="EXPENDIURES"
             android:textSize="18sp"
             android:textColor="#E229DA29"/>
     </androidx.cardview.widget.CardView>
@@ -117,7 +117,7 @@
             android:layout_height="match_parent"
             android:gravity="bottom"
             android:layout_marginStart="15dp"
-            android:text="CREDIT"
+            android:text="EARNINGS"
             android:textSize="18sp"
             android:textColor="#E229DA29"/>
     </androidx.cardview.widget.CardView>
