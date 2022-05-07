@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>bu
     <color name="button_selected">#1D385A</color>
     <color name="button_unselected">#3F618C</color>
+    <color name="lgreen">#A2F3A2</color>
+    <color name="lpink">#F69E9E</color>
 </resources>

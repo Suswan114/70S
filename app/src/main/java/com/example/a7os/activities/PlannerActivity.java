@@ -1,9 +1,11 @@
 package com.example.a7os.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.a7os.R;
 import com.github.mikephil.charting.animation.Easing;
@@ -19,13 +21,20 @@ import java.util.ArrayList;
 
 public class PlannerActivity extends AppCompatActivity {
 
-    private PieChart pie1,pie2;
+    private PieChart pie1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planner);
         pie1=findViewById(R.id.pie_chart_1);
+        ImageView backButton = findViewById(R.id.back_button_planner);
+
+        backButton.setOnClickListener(view -> {
+            Intent myIntent = new Intent(PlannerActivity.this, MainActivity.class);
+            PlannerActivity.this.startActivity(myIntent);
+            finish();
+        });
         loadPieChart1();
     }
 

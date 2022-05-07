@@ -32,6 +32,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="end"
                     android:hint="100000"
+                    android:inputType="number"
                     android:textSize="22sp"
                     android:layout_marginEnd="26dp"
                     android:id="@+id/money_spend"
@@ -63,6 +64,7 @@
                 android:clickable="true"
                 android:focusable="true">
                 <ImageView
+                    android:id="@+id/essentials"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_hand_holding_usd"
@@ -81,6 +83,7 @@
                 android:clickable="true"
                 android:focusable="true">
                 <ImageView
+                    android:id="@+id/entertainment"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_coins"
@@ -99,6 +102,7 @@
                 android:clickable="true"
                 android:focusable="true">
                 <ImageView
+                    android:id="@+id/gift"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_gift"
@@ -117,6 +121,7 @@
                 android:clickable="true"
                 android:focusable="true">
                 <ImageView
+                    android:id="@+id/miscellaneous"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_question"
@@ -137,6 +142,7 @@
                 android:backgroundTint="@color/white"
                 android:focusable="true">
                 <ImageView
+                    android:id="@+id/house"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_home"
@@ -155,6 +161,7 @@
                 android:clickable="true"
                 android:focusable="true">
                 <ImageView
+                    android:id="@+id/food"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_pizza_slice"
@@ -173,6 +180,7 @@
                 android:clickable="true"
                 android:focusable="true">
                 <ImageView
+                    android:id="@+id/medicine"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_briefcase_medical"
@@ -191,6 +199,7 @@
                 android:clickable="true"
                 android:focusable="true">
                 <ImageView
+                    android:id="@+id/transport"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_subway"
