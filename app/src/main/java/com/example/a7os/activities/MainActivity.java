@@ -1,6 +1,9 @@
 package com.example.a7os.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -15,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottom_navigation;
+    ImageView qrScanner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new DashboardFragment()).commit();
         bottom_navigation=findViewById(R.id.bottom_nav);
+        qrScanner=findViewById(R.id.qr);
+
+        qrScanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, QrScannerActivity.class);
+                MainActivity.this.startActivity(myIntent);
+                finish();
+            }
+        });
         bottom_navigation.setOnNavigationItemSelectedListener(item -> {
 
             Fragment selectedFragment =null;
