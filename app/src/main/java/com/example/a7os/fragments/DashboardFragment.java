@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -155,6 +156,7 @@ public class DashboardFragment extends Fragment {
         return view;
     }
     private void showAddDialog(){
+
         Dialog add_dialog=new Dialog(getActivity());
         add_dialog.setContentView(R.layout.add_dialog_layout);
         add_dialog.getWindow().setBackgroundDrawableResource(transparent);
@@ -162,6 +164,7 @@ public class DashboardFragment extends Fragment {
         TextView cancel_button=add_dialog.findViewById(R.id.cancel_button);
         CardView standardIncome=add_dialog.findViewById(R.id.standard_income);
         CardView deposits=add_dialog.findViewById(R.id.deposits);
+        EditText addVal=add_dialog.findViewById(R.id.money_added);
 
         final int[] flag_1 = {0};
         final int[] flag_2 = {0};
@@ -204,6 +207,7 @@ public class DashboardFragment extends Fragment {
         minus_dialog.setContentView(R.layout.minus_dialog_layout);
         minus_dialog.getWindow().setBackgroundDrawableResource(transparent);
 
+        EditText minusVal=minus_dialog.findViewById(R.id.money_spend);
         TextView ok_button=minus_dialog.findViewById(R.id.ok_button);
         TextView cancel_button=minus_dialog.findViewById(R.id.cancel_button);
         CardView houseButton=minus_dialog.findViewById(R.id.house_button);

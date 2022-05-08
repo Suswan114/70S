@@ -1,8 +1,9 @@
 package com.example.a7os.activities;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottom_navigation;
     ImageView qrScanner;
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -30,16 +32,7 @@ public class MainActivity extends AppCompatActivity {
         bottom_navigation=findViewById(R.id.bottom_nav);
         qrScanner=findViewById(R.id.qr);
 
-        qrScanner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent myIntent = new Intent(MainActivity.this, QrScannerActivity.class);
-                MainActivity.this.startActivity(myIntent);
-                finish();
-            }
-        });
         bottom_navigation.setOnNavigationItemSelectedListener(item -> {
-
             Fragment selectedFragment =null;
 
             switch (item.getItemId())
@@ -66,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     selectedFragment).commit();
             return true;
+        });
+        qrScanner.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(),QrActivity.class));
         });
     }
 }
