@@ -11,7 +11,6 @@ public class LeaderboardModelClass {
 
     }
 
-
     public String getRank() {
         return rank;
     }

@@ -30,14 +30,14 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/dropdown"
+            android:id="@+id/profile"
             android:src="@drawable/ic_bars"/>
         <ImageView
             android:layout_width="23dp"
             android:layout_height="match_parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/dropdown"
+            app:layout_constraintEnd_toStartOf="@id/profile"
             android:layout_marginEnd="15dp"
             android:id="@+id/qr"
             android:clickable="true"

@@ -1,6 +1,5 @@
 package com.example.a7os.fragments;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,6 +15,8 @@ import androidx.fragment.app.Fragment;
 import com.example.a7os.R;
 import com.example.a7os.activities.InvestmentLearnActivity;
 
+import java.util.Objects;
+
 public class LearnFragment extends Fragment {
 
     CardView savings,invest;
@@ -27,22 +28,16 @@ public class LearnFragment extends Fragment {
         invest=view.findViewById(R.id.invest);
         savings=view.findViewById(R.id.savings);
 
-        invest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(getActivity(), InvestmentLearnActivity.class);
-                startActivity(i);
-                ((Activity)getActivity()).overridePendingTransition(0,0);
-            }
+        invest.setOnClickListener(view1 -> {
+            Intent i=new Intent(getActivity(), InvestmentLearnActivity.class);
+            startActivity(i);
+            Objects.requireNonNull(getActivity()).overridePendingTransition(0,0);
         });
-        savings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent viewIntent =
-                        new Intent("android.intent.action.VIEW",
-                                Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
-                startActivity(viewIntent);
-            }
+        savings.setOnClickListener(view12 -> {
+            Intent viewIntent =
+                    new Intent("android.intent.action.VIEW",
+                            Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+            startActivity(viewIntent);
         });
 
         return view;

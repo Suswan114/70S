@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,11 +17,12 @@ import java.util.List;
 public class LeaderboardAdapter extends RecyclerView.Adapter<LeaderboardAdapter.ViewHolder> {
 
 
-    private List<LeaderboardModelClass> leaderboardList;
+    private final List<LeaderboardModelClass> leaderboardList;
 
 
 
-    public LeaderboardAdapter(Context context, List<LeaderboardModelClass>leaderboardList){
+    public LeaderboardAdapter(Context context,
+                              List<LeaderboardModelClass>leaderboardList){
         this.leaderboardList=leaderboardList;
     }
 
@@ -52,9 +52,11 @@ public class LeaderboardAdapter extends RecyclerView.Adapter<LeaderboardAdapter.
         return leaderboardList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView rank,name,score;
+        private final TextView rank;
+        private final TextView name;
+        private final TextView score;
 
 
         public ViewHolder(@NonNull View itemView) {

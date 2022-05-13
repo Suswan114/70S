@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottom_navigation;
-    ImageView qrScanner;
+    ImageView qrScanner,profileButton;
 
     @SuppressLint("NonConstantResourceId")
     @Override
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 new DashboardFragment()).commit();
         bottom_navigation=findViewById(R.id.bottom_nav);
         qrScanner=findViewById(R.id.qr);
+        profileButton=findViewById(R.id.profile);
 
         bottom_navigation.setOnNavigationItemSelectedListener(item -> {
             Fragment selectedFragment =null;
@@ -60,8 +62,17 @@ public class MainActivity extends AppCompatActivity {
                     selectedFragment).commit();
             return true;
         });
+
         qrScanner.setOnClickListener(view -> {
             startActivity(new Intent(getApplicationContext(),QrActivity.class));
         });
+
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+            }
+        });
+
     }
 }

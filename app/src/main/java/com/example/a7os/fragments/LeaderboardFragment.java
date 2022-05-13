@@ -17,6 +17,7 @@ import com.example.a7os.modelClasses.LeaderboardModelClass;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class LeaderboardFragment extends Fragment {
     RecyclerView recyclerView;
@@ -31,7 +32,7 @@ public class LeaderboardFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_leaderboard,container,false);
         initData();
         recyclerView= view.findViewById(R.id.leaderboard_recycler);
-        layoutManager=new LinearLayoutManager(getActivity().getParent());
+        layoutManager=new LinearLayoutManager(Objects.requireNonNull(getActivity()).getParent());
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
         adapter=new LeaderboardAdapter(getContext(),leaderboardList);
