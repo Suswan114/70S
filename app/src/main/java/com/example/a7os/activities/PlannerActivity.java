@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.a7os.R;
@@ -16,12 +17,22 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import java.util.ArrayList;
 
 public class PlannerActivity extends AppCompatActivity {
 
     private PieChart pie1;
+    FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
+    String userID;
+    String house,food,transport,essential,misc,gift,luxury,medical;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +40,22 @@ public class PlannerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_planner);
         pie1=findViewById(R.id.pie_chart_1);
         ImageView backButton = findViewById(R.id.back_button_planner);
+
+        fAuth=FirebaseAuth.getInstance();
+        fStore=FirebaseFirestore.getInstance();
+        userID=fAuth.getCurrentUser().getUid();
+
+        DocumentReference documentReference=fStore.collection("users").document(userID);
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+
+                //retrieve data here
+
+                house=value.getString("House");
+
+            }
+        });
 
         backButton.setOnClickListener(view -> {
             Intent myIntent = new Intent(PlannerActivity.this, MainActivity.class);
