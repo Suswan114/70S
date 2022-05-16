@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/sign_up"
-        android:text="SIGN UP"
+        android:text="@string/sign_up"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textColor="@color/white"
@@ -38,7 +38,7 @@
         app:layout_constraintBottom_toTopOf="@id/signup_pass"
         android:textColorHint="@color/white"
         android:inputType="textEmailAddress"
-        android:hint="EMAIL"/>
+        android:hint="@string/email"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
         app:layout_constraintBottom_toTopOf="@id/signup_phone"
         android:textColorHint="@color/white"
         android:inputType="textPassword"
-        android:hint="ENTER PASSWORD"/>
+        android:hint="@string/enter_password"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,10 +57,22 @@
         android:layout_marginHorizontal="20dp"
         app:layout_constraintTop_toBottomOf="@id/signup_pass"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/signup_button"
+        app:layout_constraintBottom_toTopOf="@id/signup_age"
         android:textColorHint="@color/white"
         android:inputType="phone"
-        android:hint="PHONE NO." />
+        android:hint="@string/phone_no"
+        tools:ignore="HardcodedText" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signup_age"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/signup_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/signup_button"
+        android:textColorHint="@color/white"
+        android:inputType="number"
+        android:hint="@string/age" />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,7 +89,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="REGISTER"
+            android:text="NEXT"
             android:gravity="center"
             android:textSize="20sp"
             android:textColor="@color/black"
