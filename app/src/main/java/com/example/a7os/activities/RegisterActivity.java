@@ -106,7 +106,7 @@ public class RegisterActivity extends AppCompatActivity {
                             user.put("Essentials",v);
                             user.put("Gift",v);
                             user.put("Miscellaneous",v);
-
+                            //sed
                             documentReference.set(user);
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                             finish();
