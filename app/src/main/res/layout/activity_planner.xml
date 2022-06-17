@@ -217,14 +217,16 @@
         app:layout_constraintEnd_toStartOf="@id/food_text"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/white">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:gravity="center"
             android:text="HOUSING"
-            android:textSize="10sp"
-            android:gravity="center" />
+            android:textColor="@color/black"
+            android:textSize="10sp" />
         <TextView
+            android:id="@+id/house_amt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -256,6 +258,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/food_amt"
             android:textColor="@color/black"
             android:layout_marginBottom="3dp"
             android:text="INR 1000"
@@ -284,6 +287,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/medical_amt"
             android:textColor="@color/black"
             android:text="INR 1000"
             android:gravity="center"
@@ -312,6 +316,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/transport_amt"
             android:textColor="@color/black"
             android:text="INR 1000"
             android:gravity="center"
@@ -449,6 +454,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/essentials_amt"
             android:textColor="@color/black"
             android:text="INR 1000"
             android:gravity="center"
@@ -476,6 +482,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/luxury_amt"
             android:textColor="@color/black"
             android:text="INR 1000"
             android:gravity="center"
@@ -504,6 +511,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/gift_amt"
             android:textColor="@color/black"
             android:text="INR 1000"
             android:gravity="center"
@@ -531,6 +539,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/misc_amt"
             android:textColor="@color/black"
             android:text="INR 1000"
             android:gravity="center"

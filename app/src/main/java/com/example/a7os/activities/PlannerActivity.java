@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,13 +34,25 @@ public class PlannerActivity extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userID;
     String house,food,transport,essential,misc,gift,luxury,medical;
+    TextView House,Food,Transport,Essential,Misc,Gift,Luxury,Medical;
+    ImageView backButton;
+    //ghjghgh
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planner);
         pie1=findViewById(R.id.pie_chart_1);
-        ImageView backButton = findViewById(R.id.back_button_planner);
+        backButton = findViewById(R.id.back_button_planner);
+
+        House=findViewById(R.id.house_amt);
+        Food=findViewById(R.id.food_amt);
+        Transport=findViewById(R.id.transport_amt);
+        Essential=findViewById(R.id.transport_amt);
+        Misc=findViewById(R.id.misc_amt);
+        Gift=findViewById(R.id.gift_amt);
+        Luxury=findViewById(R.id.luxury_amt);
+        Medical=findViewById(R.id.medical_amt);
 
         fAuth=FirebaseAuth.getInstance();
         fStore=FirebaseFirestore.getInstance();
@@ -50,12 +63,26 @@ public class PlannerActivity extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
 
-                //retrieve data here
-
                 house=value.getString("House");
+                food=value.getString("Food");
+                essential=value.getString("Essentials");
+                gift= value.getString("Gift");
+                transport=value.getString("Transport");
+                misc=value.getString("Miscellaneous");
+                luxury=value.getString("Luxury");
+                medical=value.getString("Medical");
 
             }
         });
+
+        House.setText(house);
+        Food.setText(food);
+        Essential.setText(essential);
+        Gift.setText(gift);
+        Transport.setText(transport);
+        Misc.setText(misc);
+        Luxury.setText(luxury);
+        Medical.setText(medical);
 
         backButton.setOnClickListener(view -> {
             Intent myIntent = new Intent(PlannerActivity.this, MainActivity.class);
