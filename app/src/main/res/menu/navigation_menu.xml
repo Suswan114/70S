@@ -10,11 +10,7 @@
         android:icon="@drawable/ic_funnel_dollar"
         android:title="Wallet" />
     <item
-        android:id="@+id/learn"
+        android:id="@+id/nft"
         android:icon="@drawable/ic_learn"
-        android:title="Learn" />
-    <item
-        android:id="@+id/leaderboard"
-        android:icon="@drawable/ic_star"
-        android:title="Leaderboard" />
+        android:title="NFT" />
 </menu>
